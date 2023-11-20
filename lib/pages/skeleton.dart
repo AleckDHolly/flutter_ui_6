@@ -17,11 +17,10 @@ class Skeleton extends StatelessWidget {
         alignment: Alignment.bottomLeft,
         children: [
           PageView.builder(
-            //TODO: Needs to change item count
             itemCount: shownCategory.length,
             scrollDirection: Axis.horizontal,
             controller: controller,
-            physics: ClampingScrollPhysics(),
+            physics: const ClampingScrollPhysics(),
             itemBuilder: (context, index) {
               return Stack(
                 alignment: Alignment.bottomCenter,
@@ -48,7 +47,7 @@ class Skeleton extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               shownCategory[index].category,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
                               ),
@@ -67,7 +66,7 @@ class Skeleton extends StatelessWidget {
                               padding: const EdgeInsets.all(5.0),
                               child: Text(
                                 shownCategory[index].title,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 40,
                                     fontWeight: FontWeight.w700),
@@ -78,7 +77,7 @@ class Skeleton extends StatelessWidget {
                         ),
                         Text(
                           shownCategory[index].subtitle,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 15,
                               fontWeight: FontWeight.w700),
@@ -97,14 +96,14 @@ class Skeleton extends StatelessWidget {
                 padding: const EdgeInsets.all(20),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(127, 158, 158, 158),
+                      color: const Color.fromARGB(127, 158, 158, 158),
                       borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(10),
                     child: SmoothPageIndicator(
                       controller: controller,
                       count: shownCategory.length,
-                      effect: ExpandingDotsEffect(
+                      effect: const ExpandingDotsEffect(
                           activeDotColor: Colors.white,
                           dotHeight: 4,
                           dotWidth: 4),
@@ -114,8 +113,8 @@ class Skeleton extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child:
-                    ElevatedButton(onPressed: () {}, child: Text("Reserve ↗")),
+                child: ElevatedButton(
+                    onPressed: () {}, child: const Text("Reserve ↗")),
               )
             ],
           ),

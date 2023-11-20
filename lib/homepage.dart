@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
   MainCategories mainCategories = MainCategories.events;
   bool isSelected1 = true;
   bool isSelected2 = false;
@@ -94,7 +94,7 @@ class _HomePageState extends State<HomePage> {
                                     goToFirstPage();
                                   });
                                 },
-                                child: Text(
+                                child: const Text(
                                   "Events",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                                     goToFirstPage();
                                   });
                                 },
-                                child: Text(
+                                child: const Text(
                                   "Bars/Restaurants",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
@@ -166,7 +166,7 @@ class _HomePageState extends State<HomePage> {
                                     goToFirstPage();
                                   });
                                 },
-                                child: Text(
+                                child: const Text(
                                   "Parties",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
@@ -188,7 +188,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   BottomPage(),
                   Padding(
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Stack(
